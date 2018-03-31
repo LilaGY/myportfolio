@@ -19,18 +19,19 @@
     $mail->Username   = $username;  // username
     $mail->Password   = $password;            // password
 
-    $mail->SetFrom(_REQUEST['email'], _REQUEST['name']);
+    $mail->SetFrom(_POST['email'], _POST['name']);
 
-    $mail->Subject    = "Nouveau message de " . _REQUEST['name'];
+    $mail->Subject    = "Nouveau message de " . _POST['name'];
 
-    $mail->MsgHTML(_REQUEST['message']);
+    $mail->MsgHTML(_POST['message']);
 
     $address = "lila.grv@hotmail.fr";
     $mail->AddAddress($address, "Lila");
 
     if(!$mail->Send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
+        echo "Mailer Error: " . $mail->ErrorInfo;
     } else {
-    echo "Message sent!";
+        echo "Message sent!";
     }
+
 ?>
