@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/lilag.css" />
+		<script src='assets/js/lilag.js'></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body id="top">
@@ -92,18 +94,28 @@
 						<p>Je t'ai l'air sympathique ? Tu as envie de travailler avec moi ? <br>N'hésite pas à me contacter pour toutes informations complémentaires :).</p>
 						<div class="row">
 							<div class="8u 12u$(small)">
-									<form action="send.php" method="post" enctype="application/x-www-form-urlencoded" name="formulaire">
+									<form method="post" enctype="application/x-www-form-urlencoded" id='mailform'>
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nom" required></div>
 										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" required></div>
 										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4" required></textarea></div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Envoyer message" /></li>
+											<li><input type='button' onclick="sendMail()" value="Envoyer message" /></li>
 									</ul>
-								</form>
-					
+									</form>
 							</div> 
+
+							<!-- The Modal saying the mail is sent-->
+							<div id="myModal" class="modal">
+								<!-- Modal content -->
+								<div class="modal-content">
+								<div class="modal-header">
+									<span class="close">&times;</span>
+									<h2 style="color: white">Mail envoyé !</h2>
+								</div>
+								</div>
+							</div>
 							<div class="4u$ 12u$(small)">
 								<ul class="labeled-icons">
 									<li>
