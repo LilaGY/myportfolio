@@ -1,11 +1,13 @@
 function sendMail() {
 
+    var isvalid = $('#mailform').checkValidity();
+
     // get fields values to check if not empty
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var message = document.getElementById('message').value;
 
-    if (name.length && email.length && message.length) {
+    if (name.length && email.length && message.length && isvalid) {
         $.post('send.php', $('#mailform').serialize());
         openModal();
     }
