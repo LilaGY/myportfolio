@@ -16,14 +16,14 @@
     $mail->SMTPSecure = "tls";                 
     $mail->Host       = "smtp.gmail.com";      // SMTP server
     $mail->Port       = 587;                   // SMTP port
-    $mail->Username   = $username;  // username
+    $mail->Username   = $username;            // username
     $mail->Password   = $password;            // password
 
-    $mail->SetFrom(_POST['email'], _POST['name']);
+    $mail->SetFrom($_POST['email'], $_POST['name']);
 
-    $mail->Subject    = "Nouveau message de " . _POST['name'];
+    $mail->Subject    = "Nouveau message de " . $_POST['name'];
 
-    $mail->MsgHTML(_POST['message']);
+    $mail->MsgHTML($_POST['message']);
 
     $address = "lila.grv@hotmail.fr";
     $mail->AddAddress($address, "Lila");
