@@ -1,7 +1,21 @@
-//import sound library in order to play audio files
-//+ declare sound variables
-//import processing.sound.*;
-//SoundFile youpi, theme;
+//make a new HTML5 audio object named audio
+Audio youpi = new Audio();
+Audio theme = new Audio();
+// make string that will house the audio extension
+String youpifile, themefile;
+
+youpifile = "dataAngkorAttack/youpi.wav";
+themefile = "dataAngkorAttack/theme.mp3";
+
+youpi.setAttribute("src", youpifile);
+theme.setAttribute("src", themefile);
+ 
+//make a variable for volume and set it to 0
+//(volume runs between 0 and 1)
+float vol = 0;
+//make a boolean to keep track when we are fading
+bool fadeOut = false;
+int col = 0;
 
 class Laser {
   //member variables
@@ -144,7 +158,7 @@ class Aliens {
     if (aX-27<lsX && aX+57>lsX && aY<lsY && aY+35>lsY) {
       dead = true;
       hit = true;
-      //youpi.play();
+      youpi.play();
       counter+=1;
       aY-=2000;
       aX+=1000;
@@ -235,7 +249,7 @@ void setup() {
   //theme = new SoundFile(this, "dataAngkorAttack/theme.mp3");
   
   //play main theme
-  ///theme.play();
+  theme.play();
   
   //Pop clouds
   for (int i=0; i<nbnuage;i++){
