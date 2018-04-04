@@ -1,7 +1,7 @@
 //import sound library in order to play audio files
 //+ declare sound variables
-import processing.sound.*;
-SoundFile youpi, theme;
+//import processing.sound.*;
+//SoundFile youpi, theme;
 
 //Declare Spaceship (monkeys)
 Spaceship s1;
@@ -51,22 +51,22 @@ void setup() {
   background(0);
   
   //load pictures
-  banane[0] = loadImage("banane.png");
-  banane[1] = loadImage("banane2.png");
-  singe[1] = loadImage("singe.png");
-  singe[2] = loadImage("singe2.png");
-  singe[0] = loadImage("singe3.png");
-  ciel = loadImage("ciel.png");
-  temple = loadImage("temple.png");
-  nuage = loadImage("nuage.png");
-  cup = loadImage("cup.png");
+  banane[0] = loadImage("dataAngkorAttack/banane.png");
+  banane[1] = loadImage("dataAngkorAttack/banane2.png");
+  singe[1] = loadImage("dataAngkorAttack/singe.png");
+  singe[2] = loadImage("dataAngkorAttack/singe2.png");
+  singe[0] = loadImage("dataAngkorAttack/singe3.png");
+  ciel = loadImage("dataAngkorAttack/ciel.png");
+  temple = loadImage("dataAngkorAttack/temple.png");
+  nuage = loadImage("dataAngkorAttack/nuage.png");
+  cup = loadImage("dataAngkorAttack/cup.png");
   
   //load sounds
-  youpi = new SoundFile(this, "youpi.wav");
-  theme = new SoundFile(this, "theme.mp3");
+  //youpi = new SoundFile(this, "dataAngkorAttack/youpi.wav");
+  //theme = new SoundFile(this, "dataAngkorAttack/theme.mp3");
   
   //play main theme
-  theme.play();
+  ///theme.play();
   
   //Pop clouds
   for (int i=0; i<nbnuage;i++){
