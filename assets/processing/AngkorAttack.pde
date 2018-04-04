@@ -58,13 +58,17 @@ class Spaceship {
   //constructor
   Spaceship() {
   }
+
   void display(int n) {
+
     fill(220,0,0);
+
     /*triangle(ssX+35,495,ssX+45,490,ssX+45,465);
     triangle(ssX+65,495,ssX+55,490,ssX+55,465);
     triangle(ssX+58,485,ssX+42,485,ssX+50,460);*/
-     ssY = 392;
+    ssY = 392;
     image(singe[n],ssX,ssY,60,56.7);
+
     if ((millis()>0 && millis()<6000)){
       
       fill(255);
@@ -106,14 +110,14 @@ class Aliens {
   }
 
   void display() {
-    if (dead == false && lvl == 1) {
+    if (!dead && lvl == 1) {
       fill(150, 150, 0);
       image(banane[0], aX, aY, 50, 40);
       //image(banane[1], aX-7, aY+5, 20, 15);
       //image(banane[0], aX+27, aY+5, 20, 15);
       //image(banane[1], aX+10, aY+5, 20, 15);
     }
-    if (dead == false && lvl == 2) {
+    if (!dead && lvl == 2) {
       fill(245, 236, 27);
       image(banane[1], aX, aY, 50, 40);
       //image(banane[1], aX-7, aY+5, 20, 15);
